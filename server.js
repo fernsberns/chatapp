@@ -91,13 +91,10 @@ app.get('/listofusers/:id',function(req,res){
 //});
 
 
-http.listen(process.env.PORT || 3000, function(){
-  console.log('listening on', http.address().port);
-});
 
-//var server = app.listen(3000,function(){
-//console.log('Chat server running on port 3000');
-//});
+var server = app.listen(3000,function(){
+console.log('Chat server running on port 3000');
+});
 
 var io = socket(server);
 
