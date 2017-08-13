@@ -1,0 +1,10 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongojs": "^2.4.0",
+    "socket.io": "^2.0.3"
+  }
+}
