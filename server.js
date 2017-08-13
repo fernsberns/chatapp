@@ -2,14 +2,16 @@ var express = require('express');
 var mongojs = require('mongojs');
 var bodyParser = require('body-parser');
 var socket = require('socket.io');
+var mLab = require('mongolab-data-api')('z127-aeTjCC6pmYw0HgMBkVTYrutkJiS');
+
 
 var app = express();
 
 app.use(express.static(__dirname+"/public"));
 app.use(bodyParser.json());
 
-var db = mongojs('chatdb', ['listofmessages']);
-var db2 = mongojs('chatdb', ['listofusers']);
+var db = mongojs('mongodb://admin:pass@ds035766.mlab.com:35766/chatdb', ['listofmessages']);
+var db2 = mongojs('mongodb://admin:pass@ds035766.mlab.com:35766/chatdb', ['listofusers']);
 
 //db 
 
