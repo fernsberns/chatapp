@@ -91,7 +91,7 @@ app.get('/listofusers/:id',function(req,res){
 //});
 
 
-var server = http.listen(process.env.PORT || 3000, function(){
+http.listen(process.env.PORT || 3000, function(){
   console.log('listening on', http.address().port);
 });
 
