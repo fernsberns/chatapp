@@ -28,7 +28,7 @@ var refresh2=function(){
 refresh();
 refresh2();
 
-myVar = setInterval(alertFunc, 1000);
+myVar = setInterval(alertFunc, 10000);
 
 function alertFunc() {
   
