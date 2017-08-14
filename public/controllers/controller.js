@@ -4,6 +4,8 @@ ChatApp.controller('ChatController', ['$scope', '$http', function($scope, $http)
 
 var socket = io.connect('http://localhost:3000');
 
+var myVar;
+
 
 
 var refresh=function(){
@@ -26,9 +28,15 @@ var refresh2=function(){
 refresh();
 refresh2();
 
+myVar = setInterval(alertFunc, 1000);
 
+function alertFunc() {
+  
+	refresh();
 
+	refresh2();
 
+}
 
 
 
