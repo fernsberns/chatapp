@@ -104,6 +104,7 @@ io.on('connection', function(socket){
 	console.log('made socket connection',socket.id)
 
 
+
 	socket.on('refresh',function(){
 
 		io.sockets.emit('refresh');
@@ -119,6 +120,20 @@ io.on('connection', function(socket){
     	io.sockets.emit('userdisconnect');
 
   });
+
+	setTimeout(function, 1000){
+
+	socket.on('refresh',function(){
+
+		io.sockets.emit('refresh');
+	});
+
+	socket.on('refresh2',function(){
+
+		io.sockets.emit('refresh2');
+	});
+
+	};
 
 });
 

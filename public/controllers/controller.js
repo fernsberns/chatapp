@@ -27,6 +27,11 @@ refresh();
 refresh2();
 
 
+
+
+
+
+
 $scope.addMessage= function(){
 	console.log($scope.messages);
 	$http.post('/listofmessages', $scope.messages).then(function(response){
@@ -61,6 +66,8 @@ socket.on('refresh2',function(){
 socket.on('userdisconnect',function(){
 		removeUser();
 });
+
+
 
 
 $scope.removeUser=function(id){
