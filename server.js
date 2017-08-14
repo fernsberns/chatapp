@@ -92,9 +92,9 @@ app.get('/listofusers/:id',function(req,res){
 //		});
 //});
 
+var port = process.env.PORT || 3000;
 
-
-var server = app.listen(3000,function(){
+var server = app.listen(port, function() {
 console.log('Chat server running on port 3000');
 });
 
