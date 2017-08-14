@@ -16,6 +16,14 @@ var refresh=function(){
 	});
 
 };
+
+var refresh3=function(){
+	$http.get('/listofmessages').then(function(response){
+		console.log("I got the data I requested");
+		$scope.listofmessages = response.data;
+	});
+
+};
 var refresh2=function(){
 	$http.get('/listofusers').then(function(response){
 		console.log("I got the data I requested");
@@ -25,6 +33,7 @@ var refresh2=function(){
 
 };
 
+
 refresh();
 refresh2();
 
@@ -32,7 +41,7 @@ myVar = setInterval(alertFunc, 10000);
 
 function alertFunc() {
   
-	refresh();
+	refresh3();
 
 	refresh2();
 
