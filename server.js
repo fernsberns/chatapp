@@ -121,19 +121,7 @@ io.on('connection', function(socket){
 
   });
 
-	setTimeout(function, 1000){
-
-	socket.on('refresh',function(){
-
-		io.sockets.emit('refresh');
-	});
-
-	socket.on('refresh2',function(){
-
-		io.sockets.emit('refresh2');
-	});
-
-	};
+	
 
 });
 
