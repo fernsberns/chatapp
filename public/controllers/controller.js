@@ -13,6 +13,8 @@ var refresh=function(){
 		console.log("I got the data I requested");
 		$scope.listofmessages = response.data;
 		$scope.messages=null;
+		$( '#messageBody' ).animate({scrollTop:9999999999999999999},500);
+    	$( '#loginBody' ).animate({scrollTop:9999999999999999999},500);
 	});
 
 };
